@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de IMC</title>
+</head>
+<body>
+  <h1>Calculadora de IMC</h1>
+  <form action="/imc/result" method="post">
+    {{#fields}}
+      {{#field}}
+        <label for="{{name}}">{{label}}</label>
+        <input type="{{type}}" name="{{name}}" id="{{name}}" required>
+        <br>
+      {{/field}}
+    {{/fields}}
+    <button type="submit">Calcular IMC</button>
+  </form>
+</body>
+</html>
